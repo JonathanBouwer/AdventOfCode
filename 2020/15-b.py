@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 a = [5,1,9,18,13,8,0]
 
@@ -18,4 +18,4 @@ for i in range(len(a), n):
 
 print(cur)
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

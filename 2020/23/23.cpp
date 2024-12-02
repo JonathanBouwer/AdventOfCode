@@ -52,5 +52,5 @@ int main(int argc, char *argv) {
     free(circle);
     auto stop = std::chrono::high_resolution_clock::now(); 
     auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start); 
-    printf("Time %fms\n", duration.count() / 1000000.0);
+    printf("Time %.3fms\n", duration.count() / 1000000.0);
 }

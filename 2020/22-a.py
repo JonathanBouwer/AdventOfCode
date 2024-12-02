@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 p1 = [
 26,
@@ -71,4 +71,4 @@ p1_score = sum([a * (len(p1) - i) for i, a in enumerate(p1)])
 p2_score = sum([a * (len(p2) - i) for i, a in enumerate(p2)])
 print(max(p1_score, p2_score))
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

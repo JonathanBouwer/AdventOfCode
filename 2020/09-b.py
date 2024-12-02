@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 a = [
 3,
@@ -1034,4 +1034,4 @@ while j < len(a):
         print(min(cont_arr) + max(cont_arr))
         break
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

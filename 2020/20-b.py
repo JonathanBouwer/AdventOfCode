@@ -1,6 +1,6 @@
-from time import time
+from time import perf_counter
 from math import sqrt
-t0 = time()
+t0 = perf_counter()
 
 a = [
 "Tile 3583:",
@@ -2079,4 +2079,4 @@ for row in full_map:
 print(count)
 
 # Fuck this, 4hrs 23m
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

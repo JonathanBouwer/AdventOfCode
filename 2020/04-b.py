@@ -1,6 +1,6 @@
-from time import time
+from time import perf_counter
 import re
-t0 = time()
+t0 = perf_counter()
 
 a = [
 "ecl:grn",
@@ -1161,4 +1161,4 @@ for l in a:
 print(count)
 
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 a = [
 26,
@@ -107,4 +107,4 @@ for val in a:
     
 print(prev.get(a[-1]))
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

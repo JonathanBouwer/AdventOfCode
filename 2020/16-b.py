@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 limits = [
 "departure location: 49-848 or 871-949",
@@ -329,4 +329,4 @@ for ticket_name, index in ticket_names.items():
 
 print(val_sum)
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

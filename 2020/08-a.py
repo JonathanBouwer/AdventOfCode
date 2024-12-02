@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 a = [
 "acc +6",
@@ -663,4 +663,4 @@ while not PC in seen_PC:
         PC += int(val_s)
 
 print(acc)
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

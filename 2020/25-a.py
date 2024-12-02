@@ -1,6 +1,6 @@
-from time import time
+from time import perf_counter
 from math import sqrt
-t0 = time()
+t0 = perf_counter()
 
 card_public_key = 335121
 door_public_key = 363891
@@ -30,4 +30,4 @@ for i_1, v_1 in enumerate(col_1):
         continue
     break
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

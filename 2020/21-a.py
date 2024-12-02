@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 a = [
 "rlc lbmf frqz rtxgv ctzz dfkbnvp trnd nbtdp grj sthnsg hbqgv bltlff knqh pzznzt nbgvrls pdjkbf sxbjr mhrp pmqm vthsdx zqtgm pmh dnfgghrh grnrr zvbm qghp zqvthqt vgq qjdqhx ndcssdm cqbp pmdb nkz qvhq tlnz jptplj svr zqtlns lrsbsl mlsmqjln bjpkhx zgqf qfdh shmnj thn rfbtj snhph kjzl xgmrx frvx nsnqf dtlgvqjd bhrj hzpk jjpgkn rvqdx mkczhrp dpmp cdqr qrbnjtj ftllkgg mlpr rfghfc xrdq zccsfk hcdz rrsct qtqmdq rnmxqtx vcqghl nxj gsskhx rljfl ksqfmnl mrgz dbhfd qgqqvxlj sqr hxclz mkpjrjf xmfg (contains soy, sesame, dairy)",
@@ -74,4 +74,4 @@ for l in a:
 ingredient_set = set(ingredients) - set.union(*allergens.values())
 print(len([i for i in ingredients if i in ingredient_set]))
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

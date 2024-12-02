@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 # All vals are prime
 a = [19,1,1,1,1,1,1,1,1,41,1,1,1,1,1,1,1,1,1,523,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,17,13,1,1,1,1,1,1,1,1,1,1,29,1,853,1,1,1,1,1,37,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,23]
@@ -25,4 +25,4 @@ for j, val in enumerate(a):
 
 print(final_val % M)
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

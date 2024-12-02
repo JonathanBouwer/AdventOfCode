@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 a = [
 "4 * 3 * (2 * 6 + (3 * 3 + 8 + 7 + 2) + 9 + 8) * 4 * 6",
@@ -434,4 +434,4 @@ for s in a:
 
 print(total)
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

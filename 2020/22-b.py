@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 p1 = [
 26,
@@ -97,4 +97,4 @@ def play_recursive_combat(p1_deck, p2_deck):
 final_winner, score = play_recursive_combat(p1, p2)
 print(score)
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

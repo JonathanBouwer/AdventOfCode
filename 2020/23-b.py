@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 max_cup = 1000000
 a = [int(i) for i in "963275481"]
@@ -38,4 +38,4 @@ for i in range(10000000):
 
 print(circle[1] * circle[circle[1]])
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

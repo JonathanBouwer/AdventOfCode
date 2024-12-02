@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 max_cup = 9
 a = [int(i) for i in "963275481"]
@@ -35,4 +35,4 @@ pos_1 = a.index(1)
 a = a[pos_1:] + a[:pos_1]
 print("".join([str(i) for i in a[1:]]))
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

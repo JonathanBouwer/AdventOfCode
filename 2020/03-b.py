@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 a = [
 "...#...###......##.#..#.....##.",
@@ -349,4 +349,4 @@ while i < len(a):
 
 print(count[0]*count[1]*count[2]*count[3]*count[4])
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

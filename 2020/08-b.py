@@ -1,5 +1,5 @@
-from time import time
-t0 = time()
+from time import perf_counter
+t0 = perf_counter()
 
 a = [
 "acc +6",
@@ -686,4 +686,4 @@ for i in range(len(a)):
     a[i] = f"{inst} {val_s}"
     
 
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')

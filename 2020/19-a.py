@@ -1,6 +1,6 @@
-from time import time
+from time import perf_counter
 import re
-t0 = time()
+t0 = perf_counter()
 
 rules_raw = {
 77: '30 112 | 20 13',
@@ -611,4 +611,4 @@ for l in a:
         count += 1
         
 print(count)
-print(f'Time: {(time()-t0) * 1000}ms')
+print(f'Time: {(perf_counter()-t0) * 1000:.3f}ms')
